@@ -11,10 +11,10 @@ public class References
     {
         Console.Write("Please enter the book that your scripture is in: ");
         book = Console.ReadLine(); //assigns the book 
-        Console.WriteLine("Now ender the chapter:");
+        Console.Write("Now ender the chapter:");
         chapter = int.Parse(Console.ReadLine());
 
-        Console.WriteLine("Now ender the verse or verses:");
+        Console.Write("Now ender the verse or verses:");
         verses = Console.ReadLine();
          //inits actual text
     }

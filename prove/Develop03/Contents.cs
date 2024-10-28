@@ -65,13 +65,29 @@ public class Contents
         Random random = new Random();
 
         int i = 0; 
-        while (i != 3)
+        if (word_count >= 3)
         {
-        int randomNumber = random.Next(0, ((word_count -1 ) - words_removed)); //-1 accounts for array staring at 0
+            while (i != 3)
+            {
+            word_count = content.Count;
+            int randomNumber = random.Next(0, word_count -1  - words_removed); //-1 accounts for array staring at 0
 
-        volitile_content[randomNumber] = "______"; // replace word with blank word
-        words_removed = ++words_removed;
-        ++i;
+            volitile_content[randomNumber] = "______"; // replace word with blank word
+            words_removed = ++words_removed;
+            ++i;
+            }
         }
-    }
+        else if( word_count <3 & word_count >=1) 
+        {
+            int randomNumber = random.Next(0, ((word_count -1 ) - words_removed)); //-1 accounts for array staring at 0
+
+            volitile_content[randomNumber] = "______"; // replace word with blank word
+            words_removed = ++words_removed;
+            ++i;
+        }
+        else
+        {
+    
+        }
+    }   
 }
