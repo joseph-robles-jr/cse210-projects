@@ -2,9 +2,9 @@ using System;
 
 public class Activity
 {
-    public string Name;
-    public string Description;
-    public int Duration;
+    protected string Name;
+    protected string Description;
+    protected int Duration;
      
 
     public void Start() // begin the activity
