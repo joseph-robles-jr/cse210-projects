@@ -1,0 +1,84 @@
+***Program.cs
+
+**Attribute:
+
+List<Checklist>checklist -- All of the created checklists 
+List<simpleGoal>simple -- All of the created simple goals
+List<Eternal>eternal --  All of the created EternalGoals
+List<String>menu -- The menu options for each class
+List<string>dubmenu
+TotalPoints : ints
+
+
+**Methods:
+
+Handlemenu()
+saveGoals()
+LoadGoals()
+
+_____________
+
+***Goal Class:
+Abstract blueprint for the goals
+
+**Attributes:
+
+_Done : bool
+_Name : string
+_Description : string
+_PointValie : Int
+
+**Methods:
+
+*get/set:
+
+SetName(str)
+SetDescription(string)
+SetPoints(int)
+SetComplete(bool)
+
+*Actual Function:
+constructGoal() -- override in each child class to suit it's needs.
+completeGoal() -- override in each child class to suit it's needs.
+_______________
+
+Goal
+^
+|
+|
+
+***Checklist Class
+A goal with multiple different items within 
+s
+**Attributes:
+
+_TimesCompleted : int
+_TimesToComplete : int
+
+
+**Method
+AddBonusPoints() -- adds bonus points to the score
+CompletCheclist() -- Marks the whole list as complete!
+_______________
+
+Goal
+^
+|
+|
+
+***SimpleGoal Class
+The simple goal that needs to be completed once.
+
+**Atributes:
+_______________
+
+Goal
+^
+|
+|
+
+***Eternal Class:
+________________
+
+
+
