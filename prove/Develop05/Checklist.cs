@@ -16,7 +16,29 @@ class Checklist : Goal
 
 public void AddBonusPoints()
 {
+  ;
+}
 
+protected override bool SetComplete()
+{
+    //set to true if completed.
+  ++_TimesCompleted;
+  bool _Done;
+
+  if (_TimesToComplete == _TimesCompleted) //If number of goals is completed,
+    {
+      _Done = true;
+    }
+  else
+    {
+      _Done = false;
+    }
+  return _Done;    
+}
+
+public override int returnPoints()
+{
+  return _PointValue * _TimesCompleted; 
 }
 
 }

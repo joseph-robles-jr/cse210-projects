@@ -15,7 +15,7 @@ abstract class Goal //This is the abstract parent class
         protected string SetName()
         {
             // This will set the _Name attribute
-            Console.Write("Name your goal! : ");
+            Console.Write("Name your goal: ");
             _Name = Console.ReadLine();
 
             return _Name; //use this to set _Name
@@ -24,7 +24,7 @@ abstract class Goal //This is the abstract parent class
         protected string SetDescription()
         {
             // Set the description
-            Console.Write("Describe your Goal");
+            Console.Write("Describe your Goal: ");
             _Description = Console.ReadLine();
             return _Description; 
 
@@ -38,12 +38,12 @@ abstract class Goal //This is the abstract parent class
             //return _PointValue;
         //}
 
-        protected bool SetComplete()
-        {
+        protected abstract bool SetComplete();
+        //{
             //set to true if completed.
-            bool _Done = true;
-            return _Done;            
-        }
+            // bool _Done = true;
+            // return _Done;            
+        //}
 
 
         //FUCNTIONAL SECTION
@@ -62,5 +62,7 @@ abstract class Goal //This is the abstract parent class
             _Done = SetComplete();
             return _PointValue; //return point value for Program Tally.
         }
+
+        public abstract int returnPoints();
 
 }
