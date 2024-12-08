@@ -1,7 +1,10 @@
 using System;
 
+//This Program requires you to use "dotnet build" and "dotnet run"
+
 class Program
 {
+
     static void Main()
     {
         Console.WriteLine("Creating QSO...");

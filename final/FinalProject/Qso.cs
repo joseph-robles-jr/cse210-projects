@@ -73,7 +73,6 @@ abstract class Qso
     {
         getCallsign();
         Console.WriteLine($"Frequency: {_frequency} \nCallsign: {_callsign} \nRX Signal Report: {_rstRx} \nTX Signal Report: {_rstTx} \nTime: {_date}" );
-
     }
 
      public void newQso()
