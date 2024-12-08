@@ -10,6 +10,52 @@ class Program
 
     QSOarray qsoArray = new QSOarray(); //innitialize the storage for QSO's
 
+    public void mainMenu()
+    {
+        bool exit = false;
+
+        while (!exit)
+        {
+            Console.WriteLine("\nMain Menu:");
+            Console.WriteLine("1. Create New QSO");
+            Console.WriteLine("2. List all QSS's -- Broken ");
+            Console.WriteLine("3. Broken");
+            Console.WriteLine("4. Broken");
+            Console.WriteLine("5. Broken");
+            Console.WriteLine("6. Exit");
+            Console.Write("Select an option: ");
+            
+            string choice = Console.ReadLine();
+
+            switch (choice)
+            {
+            case "1":
+                qsoMenu();
+                break;
+            case "2":
+                ;
+                break;
+            case "3":
+                ;
+                break;
+            case "4":
+                ;
+                break;
+            case "5":
+                ;
+                break;
+            case "6":
+                exit = true;
+                break;
+            default:
+                Console.WriteLine("Invalid option. Please try again.");
+                break;
+            }
+        }   
+    }
+    
+
+    
     private void qsoMenu()
     {        
     bool exit = false;
@@ -55,49 +101,7 @@ class Program
     }
 
 
-    public void mainMenu()
-    {
-    bool exit = false;
 
-    while (!exit)
-    {
-        Console.WriteLine("\nMain Menu:");
-        Console.WriteLine("1. Create New QSO");
-        Console.WriteLine("2. Broken ");
-        Console.WriteLine("3. Broken");
-        Console.WriteLine("4. Broken");
-        Console.WriteLine("5. Broken");
-        Console.WriteLine("6. Exit");
-        Console.Write("Select an option: ");
-        
-        string choice = Console.ReadLine();
-
-        switch (choice)
-        {
-        case "1":
-            qsoMenu();
-            break;
-        case "2":
-            ;
-            break;
-        case "3":
-            ;
-            break;
-        case "4":
-            ;
-            break;
-        case "5":
-            ;
-            break;
-        case "6":
-            exit = true;
-            break;
-        default:
-            Console.WriteLine("Invalid option. Please try again.");
-            break;
-        }
-    }   
-    }
 
 
 
