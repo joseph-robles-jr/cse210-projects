@@ -37,10 +37,52 @@ abstract class Qso
     DateTime now = DateTime.UtcNow; // Format the DateTime object to the desired format 
     _date = now.ToString("dd, MMMM, yyyy - HH:mm:ss"); // Output the formatted date
     }
+   
  
+    protected float getFreq()
+    {
+        return _frequency;
+    }
 
+    protected int getTx()
+    {
+        return _rstTx;
+    }
 
+    protected int getRx()
+    {
+        return _rstRx;
+    }
 
+    protected string getState()
+    {
+        return _state;
+    }
 
+    protected string getCallsign()
+    {
+        return _callsign;
+    }
 
+    protected string getTime()
+    {
+        return _date;
+    }
+
+    public void listQso()
+    {
+        getCallsign();
+        Console.WriteLine($"Frequency: {_frequency} \nCallsign: {_callsign} \nRX Signal Report: {_rstRx} \nTX Signal Report: {_rstTx} \nTime: {_date}" );
+
+    }
+
+     public void newQso()
+     {
+        setFreq();
+        setCallsign();
+        setRx();
+        setTx();
+        setState();
+        setTime();
+     }
 }
