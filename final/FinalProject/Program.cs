@@ -4,13 +4,11 @@ class Program
 {
     static void Main()
     {
-       Program program = new Program(); 
-       program.mainMenu();
-        
-              
+       Program program = new Program(); //allows us to use the methods in Program.cs 
+       program.mainMenu();              
     }
 
-    QSOarray qsoArray = new QSOarray();
+    QSOarray qsoArray = new QSOarray(); //innitialize the storage for QSO's
 
     private void qsoMenu()
     {        
@@ -31,27 +29,27 @@ class Program
 
         switch (choice)
         {
-            case "1":
-                qsoArray.newUsbQso();
-                break;
-            case "2":
-                qsoArray.newLsbQso();
-                break;
-            case "3":
-                qsoArray.newCwQso();
-                break;
-            case "4":
-                qsoArray.newAmQso();
-                break;
-            case "5":
-                qsoArray.newFmQso();
-                break;
-            case "6":
-                exit = true;
-                break;
-            default:
-                Console.WriteLine("Invalid option. Please try again.");
-                break;
+        case "1":
+            qsoArray.newUsbQso();
+            break;
+        case "2":
+            qsoArray.newLsbQso();
+            break;
+        case "3":
+            qsoArray.newCwQso();
+            break;
+        case "4":
+            qsoArray.newAmQso();
+            break;
+        case "5":
+            qsoArray.newFmQso();
+            break;
+        case "6":
+            exit = true;
+            break;
+        default:
+            Console.WriteLine("Invalid option. Please try again.");
+            break;
         }
     }   
     }
@@ -76,33 +74,31 @@ class Program
 
         switch (choice)
         {
-            case "1":
-                qsoMenu();
-                break;
-            case "2":
-                ;
-                break;
-            case "3":
-                ;
-                break;
-            case "4":
-                ;
-                break;
-            case "5":
-                ;
-                break;
-            case "6":
-                exit = true;
-                break;
-            default:
-                Console.WriteLine("Invalid option. Please try again.");
-                break;
+        case "1":
+            qsoMenu();
+            break;
+        case "2":
+            ;
+            break;
+        case "3":
+            ;
+            break;
+        case "4":
+            ;
+            break;
+        case "5":
+            ;
+            break;
+        case "6":
+            exit = true;
+            break;
+        default:
+            Console.WriteLine("Invalid option. Please try again.");
+            break;
         }
     }   
     }
 
-
-    
 
 
 }

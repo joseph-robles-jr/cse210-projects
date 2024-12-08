@@ -5,7 +5,7 @@ public class QSOarray
 
     
 
-// This function creates a new QSO object of a specified type and adds it to a list.
+// This function creates a new QSO object of a specified type and adds it to a list. It was created by AI but I now understand most of the code.
 private void createNewQSO<T>() where T : new() // The function is generic, allowing any type T that has a parameterless constructor.
     {
         // Create a new instance of the specified type T.
@@ -15,7 +15,7 @@ private void createNewQSO<T>() where T : new() // The function is generic, allow
         _qsoLists.Add(qso);
 
         // Cast the new instance to dynamic to allow calling its methods without knowing the exact type at compile time.
-        dynamic dynamicQSO = qso;
+        dynamic dynamicQSO = qso; //This allows us to store multiple kinds of objects in a list
 
         // Call the newQso method on the new instance.
         dynamicQSO.newQso();
