@@ -71,26 +71,26 @@ class Program
         Console.WriteLine("6. Exit");
         Console.Write("Select an option: ");
         
-        string choice = Console.ReadLine();
+        int choice = int.Parse(Console.ReadLine());
 
         switch (choice)
         {
-        case "1":
+        case 1:
             qsoArray.newUsbQso();
             break;
-        case "2":
+        case 2:
             qsoArray.newLsbQso();
             break;
-        case "3":
+        case 3:
             qsoArray.newCwQso();
             break;
-        case "4":
+        case 4:
             qsoArray.newAmQso();
             break;
-        case "5":
+        case 5:
             qsoArray.newFmQso();
             break;
-        case "6":
+        case 6:
             exit = true;
             break;
         default:
