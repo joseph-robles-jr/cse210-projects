@@ -19,9 +19,7 @@ class Program
             Console.WriteLine("\nMain Menu:");
             Console.WriteLine("1. Create New QSO");
             Console.WriteLine("2. List all QSS's");
-            Console.WriteLine("3. Broken");
-            Console.WriteLine("4. Broken");
-            Console.WriteLine("5. Broken");
+            Console.WriteLine("3. Save as CSV -- Broken");
             Console.WriteLine("6. Exit");
             Console.Write("Select an option: ");
             
@@ -38,12 +36,6 @@ class Program
                 Console.ReadLine();
                 break;
             case "3":
-                ;
-                break;
-            case "4":
-                ;
-                break;
-            case "5":
                 ;
                 break;
             case "6":
