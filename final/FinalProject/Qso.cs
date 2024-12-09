@@ -69,13 +69,14 @@ abstract class Qso
         return _date;
     }
 
-    public void listQso()
+    public string returnQso()
     {
         getCallsign();
-        Console.WriteLine($"Frequency: {_frequency} \nCallsign: {_callsign} \nRX Signal Report: {_rstRx} \nTX Signal Report: {_rstTx} \nTime: {_date}" );
+       string qsoString = ($"Frequency: {_frequency} \nCallsign: {_callsign} \nRX Signal Report: {_rstRx} \nTX Signal Report: {_rstTx} \nTime: {_date}" );
+       return qsoString;
     }
 
-     public void newQso()
+    public Qso()
      {
         setFreq();
         setCallsign();
@@ -84,4 +85,9 @@ abstract class Qso
         setState();
         setTime();
      }
+
+    //  public Qso()
+    //  {
+    //     this.newQso();
+    //  }
 }

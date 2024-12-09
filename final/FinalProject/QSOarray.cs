@@ -1,3 +1,8 @@
+using System.ComponentModel.Design;
+using System.Diagnostics.Contracts;
+using System.Reflection;
+using System.Runtime.CompilerServices;
+
 public class QSOarray
 {
     //make a list to hold the QSO types
@@ -13,12 +18,6 @@ private void createNewQSO<T>() where T : new() // The function is generic, allow
 
         // Add the new instance to the _qsoLists list.
         _qsoLists.Add(qso);
-
-        // Cast the new instance to dynamic to allow calling its methods without knowing the exact type at compile time.
-        dynamic dynamicQSO = qso; //This allows us to store multiple kinds of objects in a list
-
-        // Call the newQso method on the new instance.
-        dynamicQSO.newQso();
     }
 
 public void newUsbQso()
@@ -45,5 +44,21 @@ public void newFmQso()
     {
         createNewQSO<FM>();    
     }
+
+public string returnAllQso()
+{
+    string wordWall = ""; 
+    foreach (object qso in _qsoLists)
+{
+    MethodInfo method = qso.GetType().GetMethod("returnQso");
+    if (method != null)
+    {
+    string qsoString = (string)method.Invoke(qso, null);
+    wordWall += qsoString + "\n\n";
+    }
+    
+}    
+    return wordWall;
+}
 
 }

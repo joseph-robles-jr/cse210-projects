@@ -18,7 +18,7 @@ class Program
         {
             Console.WriteLine("\nMain Menu:");
             Console.WriteLine("1. Create New QSO");
-            Console.WriteLine("2. List all QSS's -- Broken ");
+            Console.WriteLine("2. List all QSS's");
             Console.WriteLine("3. Broken");
             Console.WriteLine("4. Broken");
             Console.WriteLine("5. Broken");
@@ -33,7 +33,9 @@ class Program
                 qsoMenu();
                 break;
             case "2":
-                ;
+                Console.WriteLine(qsoArray.returnAllQso());
+                Console.WriteLine("Press enter to continue... :");
+                Console.ReadLine();
                 break;
             case "3":
                 ;
@@ -68,7 +70,7 @@ class Program
         Console.WriteLine("3. Create CW QSO");
         Console.WriteLine("4. Create AM QSO");
         Console.WriteLine("5. Create FM QSO");
-        Console.WriteLine("6. Exit");
+        Console.WriteLine("6. Return to Main Menu");
         Console.Write("Select an option: ");
         
         int choice = int.Parse(Console.ReadLine());

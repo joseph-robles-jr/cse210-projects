@@ -3,11 +3,11 @@ class FM : Qso
         protected override void setRx()
     {
         
-        _rstRx = 00;
+        _rstRx = 0;
     }
 
     protected override void setTx()
     {
-        _rstTx = 00;;
+        _rstTx = 0;
     }
 }
