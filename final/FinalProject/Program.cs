@@ -23,22 +23,22 @@ class Program
             Console.WriteLine("6. Exit");
             Console.Write("Select an option: ");
             
-            string choice = Console.ReadLine();
+            int choice = int.Parse(Console.ReadLine());
 
             switch (choice)
             {
-            case "1":
+            case 1:
                 qsoMenu();
                 break;
-            case "2":
+            case 2:
                 Console.WriteLine(qsoArray.returnAllQso());
                 Console.WriteLine("Press enter to continue... :");
                 Console.ReadLine();
                 break;
-            case "3":
+            case 3:
                 ;
                 break;
-            case "6":
+            case 6:
                 exit = true;
                 break;
             default:
