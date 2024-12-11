@@ -4,6 +4,7 @@ public class Menu()
 {
 
     private QSOarray qsoArray = new QSOarray(); //innitialize the storage for QSO's
+    private Writelog writelog = new Writelog();
 
     public void mainMenu()
     {
@@ -14,7 +15,8 @@ public class Menu()
             Console.WriteLine("\nMain Menu:");
             Console.WriteLine("1. Create New QSO");
             Console.WriteLine("2. List all QSS's");
-            Console.WriteLine("3. Write to Disk");
+            Console.WriteLine("3. Write .TXT file to Disk");
+            Console.WriteLine("4. Write .ADIF file to Disk");
             Console.WriteLine("6. Exit");
             Console.Write("Select an option: ");
 
@@ -36,12 +38,20 @@ public class Menu()
                     break;
 
                 case 3:
-                    Writelog writelog = new Writelog();
+                    
                     Console.Write("\nWhat do you want this file to be called? : ");
                     string path = Console.ReadLine();
                     writelog.WriteToDisk(qsoArray.returnAllQso(), path);
                     Console.Clear();
                     break;
+                
+                case 4:
+                    Console.Write("What do you want this .ADIF file to be called? : ");
+                    path = Console.ReadLine();
+                    writelog.WriteToDisk(qsoArray.returnAllAdif(), path + ".adif");
+                    Console.Clear();
+                    break;
+            
                 case 6:
                     exit = true;
                     break;

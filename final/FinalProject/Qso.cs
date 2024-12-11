@@ -165,8 +165,13 @@ abstract class Qso
         Console.Clear();
     }
 
-    //  public Qso()
-    //  {
-    //     this.newQso();
-    //  }
+    public string exportAdif() //generates the standard Adif file for upload to QRZ.com. This is not yet completely correct.
+    {
+        string adifContent = "";
+
+        adifContent += $"<CALL:{_callsign.Length}>{_callsign} <BAND:{_frequency.ToString().Length}>{_frequency} <MODE:USB> <RST_SENT:{_rstTx.ToString().Length}>{_rstTx} <RST_RCVD:{_rstRx.ToString().Length}>{_rstRx} <QTH:{_state.Length}>{_state} <TIME_ON:{_date.Length}>{_date}\n";
+
+        return adifContent;
+    }
+
 }
