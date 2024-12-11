@@ -1,7 +1,7 @@
 abstract class Qso
 {
 
-protected Dictionary<string, string[]> _stateCodes = new Dictionary<string, string[]>
+    protected Dictionary<string, string[]> _stateCodes = new Dictionary<string, string[]>
 {
     { "Alabama", new string[] { "AL", "al", "Al", "aL", "Alabama", "alabama" } },
     { "Alaska", new string[] { "AK", "ak", "Ak", "aK", "Alaska", "alaska" } },
