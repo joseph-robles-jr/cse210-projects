@@ -1,8 +1,8 @@
 class FM : Qso
 {
-        protected override void setRx()
+    protected override void setRx()
     {
-        
+
         _rstRx = 0;
     }
 

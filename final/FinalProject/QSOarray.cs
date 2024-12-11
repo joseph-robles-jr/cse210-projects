@@ -8,10 +8,8 @@ public class QSOarray
     //make a list to hold the QSO types
     private List<object> _qsoLists = new List<object>();
 
-    
-
-// This function creates a new QSO object of a specified type and adds it to a list. It was created by AI but I now understand most of the code.
-private void createNewQSO<T>() where T : new() // The function is generic, allowing any type T that has a parameterless constructor.
+    // This function creates a new QSO object of a specified type and adds it to a list. It was created by AI but I now understand most of the code.
+    private void createNewQSO<T>() where T : new() // The function is generic, allowing any type T that has a parameterless constructor.
     {
         // Create a new instance of the specified type T.
         T qso = new T();
@@ -20,45 +18,48 @@ private void createNewQSO<T>() where T : new() // The function is generic, allow
         _qsoLists.Add(qso);
     }
 
-public void newUsbQso()
+    public void newUsbQso()
     {
-        createNewQSO<USB>();    
+        createNewQSO<USB>();
     }
 
-public void newLsbQso()
+    public void newLsbQso()
     {
-        createNewQSO<LSB>();    
+        createNewQSO<LSB>();
     }
 
-public void newCwQso()
+    public void newCwQso()
     {
-        createNewQSO<Cw>();    
+        createNewQSO<Cw>();
     }
 
-public void newAmQso()
+    public void newAmQso()
     {
-        createNewQSO<AM>();    
+        createNewQSO<AM>();
     }
 
-public void newFmQso()
+    public void newFmQso()
     {
-        createNewQSO<FM>();    
+        createNewQSO<FM>();
     }
 
-public string returnAllQso()
-{
-    string wordWall = ""; 
-    foreach (object qso in _qsoLists)
-{
-    MethodInfo method = qso.GetType().GetMethod("returnQso");
-    if (method != null)
+    public string returnAllQso()
     {
-    string qsoString = (string)method.Invoke(qso, null);
-    wordWall += qsoString + "\n\n";
+        string wordWall = "";
+        foreach (object qso in _qsoLists)
+        {
+            MethodInfo method = qso.GetType().GetMethod("returnQso");
+            if (method != null)
+            {
+                string qsoString = (string)method.Invoke(qso, null);
+                wordWall += qsoString + "\n\n";
+            }
+
+        }
+        return wordWall;
     }
-    
-}    
-    return wordWall;
-}
+
+
+
 
 }

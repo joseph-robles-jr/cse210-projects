@@ -1,6 +1,6 @@
 class Cw : Qso
 {
-        protected override void setRx()
+    protected override void setRx()
     {
         Console.Write("what is the other station's 3 digit RST (i.e 599) : ");
         string input = Console.ReadLine();
