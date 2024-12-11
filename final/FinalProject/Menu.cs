@@ -12,7 +12,7 @@ public class Menu()
             Console.WriteLine("\nMain Menu:");
             Console.WriteLine("1. Create New QSO");
             Console.WriteLine("2. List all QSS's");
-            Console.WriteLine("3. Save as CSV -- Broken");
+            Console.WriteLine("3. Write to Disk");
             Console.WriteLine("6. Exit");
             Console.Write("Select an option: ");
             
@@ -29,7 +29,10 @@ public class Menu()
                 Console.ReadLine();
                 break;
             case 3:
-                ;
+                Writelog writelog = new Writelog();
+                Console.Write("What do you want this file to be called? : ");
+                string path = Console.ReadLine();
+                writelog.WriteToDisk(qsoArray.returnAllQso(), path);
                 break;
             case 6:
                 exit = true;

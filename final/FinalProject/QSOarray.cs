@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 public class QSOarray
 {
     //make a list to hold the QSO types
-    List<object> _qsoLists = new List<object>();
+    private List<object> _qsoLists = new List<object>();
 
     
 
